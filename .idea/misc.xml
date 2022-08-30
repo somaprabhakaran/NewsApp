@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NewsApp/app/src/main/res/font/poppins_bold.xml" value="0.21944444444444444" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/activity_list.xml" value="0.209375" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.17592592592592593" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/activity_news.xml" value="0.209375" />

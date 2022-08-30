@@ -39,6 +39,7 @@
                     android:drawableStart="@drawable/search"
                     android:paddingStart="@dimen/_10sdp"
                     android:hint="@string/search"
+                    android:background="@null"
                     android:textColorHint="@color/black"
                     android:inputType="text"
                     tools:ignore="RtlSymmetry" />

@@ -19,3 +19,7 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 i
 9app/src/main/java/com/prabhakaran/newsapp/util/Utility.kt,d\2\d25554c79749a22b1b3e23d3ef36bb705588f2e5
+o
+?app/src/main/java/com/prabhakaran/newsapp/util/LoadingScreen.kt,c\7\c765dc6c540076352eca06b3e6745f10ae2da3d8
+o
+?app/src/main/java/com/prabhakaran/newsapp/model/NewsResponse.kt,9\a\9a7b9985ec1b3078dc07d5a1b985f14d399cda84
