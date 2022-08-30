@@ -19,6 +19,9 @@ interface NewsListDAO {
     @Query("SELECT * FROM News")
     fun getNews(): MutableList<News>
 
+    @Query("SELECT * FROM News LIMIT :limit OFFSET :offset")
+    fun getNews(limit: Int, offset: Int): MutableList<News>
+
     @Update
     fun getUpdate(news: News)
 }
