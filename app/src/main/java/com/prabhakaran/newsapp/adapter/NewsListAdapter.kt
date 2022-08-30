@@ -7,7 +7,7 @@ import com.prabhakaran.newsapp.activity.ListActivity
 import com.prabhakaran.newsapp.databinding.ListItemBinding
 import com.prabhakaran.newsapp.model.News
 
-class NewsListAdapter(var activity: ListActivity, var listdata: ArrayList<News>) :
+class NewsListAdapter(var activity: ListActivity, var listdata: List<News>) :
     RecyclerView.Adapter<NewsListAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -23,8 +23,11 @@ class NewsListAdapter(var activity: ListActivity, var listdata: ArrayList<News>)
         return listdata.size
     }
 
+
+
+
     fun addItems(postItems: List<News>) {
-        listdata.addAll(postItems)
+        listdata=postItems
         notifyDataSetChanged()
     }
 

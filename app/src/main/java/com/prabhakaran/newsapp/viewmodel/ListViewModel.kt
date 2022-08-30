@@ -2,7 +2,6 @@ package com.prabhakaran.newsapp.viewmodel
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ObservableBoolean
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.prabhakaran.newsapp.R
@@ -12,39 +11,59 @@ import com.prabhakaran.newsapp.model.News
 import com.prabhakaran.newsapp.model.NewsResponse
 import com.prabhakaran.newsapp.rest.ApiClient
 import com.prabhakaran.newsapp.rest.ApiService
-import com.prabhakaran.newsapp.util.SharedHelper
+import com.prabhakaran.newsapp.util.LoadingScreen
 import com.prabhakaran.newsapp.util.Utility
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class ListViewModel(val activity: AppCompatActivity) : ViewModel()  {
+class ListViewModel(val activity: AppCompatActivity) : ViewModel() {
     private var request: ApiService = ApiClient.buildService(ApiService::class.java)
     private val error = MutableLiveData<String>()
-    private val isLoginSuccess = MutableLiveData<Boolean>()
-    fun getError(): LiveData<String> = error
-    var newsList: MutableLiveData<List<News>> =  MutableLiveData()
+    var newsList: MutableLiveData<List<News>> = MutableLiveData()
     private val disposable = CompositeDisposable()
     var isLoading: ObservableBoolean = ObservableBoolean(false)
+    var tempList: MutableList<News> = mutableListOf()
 
     lateinit var newsListDao: NewsListDAO
-    var appDatabase= AppDatabase.getDatabase(activity)
+    var appDatabase = AppDatabase.getDatabase(activity)
 
     init {
-        getNews()
-        newsListDao =  appDatabase.newsListDao()
+        newsListDao = appDatabase.newsListDao()
+
+        if (newsListDao.getNews().isEmpty()) {
+            //api call
+            getNews()
+        }else{
+            //get from local
+            tempList = newsListDao.getNews()
+            newsList.value = tempList
+        }
     }
 
     fun getNews() {
 
         if (Utility.isNetworkAvailable(activity)) {
+            LoadingScreen.displayLoadingWithText(activity, "Please wait...", false)
             isLoading.set(true)
             getAllNews()
         } else {
             error.value = activity.resources.getString(R.string.connection_not_available)
+            LoadingScreen.hideLoading()
         }
-
     }
+
+    //Search
+    fun getSearchableList(s: String?) {
+        if (s == null || s.isEmpty()) {
+                newsList.value = tempList
+        }else{
+            newsList.value = tempList.filter {
+                it.title.contains(s.toString(),true)
+            }
+        }
+    }
+
 
     private fun getAllNews() {
         disposable.add(
@@ -57,12 +76,16 @@ class ListViewModel(val activity: AppCompatActivity) : ViewModel()  {
 
     fun handleResponse(newsResponse: NewsResponse) {
         isLoading.set(false)
+        LoadingScreen.hideLoading()
         newsListDao.insertNewsList(newsResponse.data)
-        newsList.value = newsListDao.getNews()
+        tempList = newsListDao.getNews()
+        newsList.value = tempList
+
     }
 
     fun handleError(throwable: Throwable) {
         isLoading.set(false)
+        LoadingScreen.hideLoading()
         error.value = throwable.message
     }
 }

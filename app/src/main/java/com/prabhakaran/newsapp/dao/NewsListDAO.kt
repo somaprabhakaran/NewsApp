@@ -13,8 +13,11 @@ interface NewsListDAO {
     @Insert(onConflict = REPLACE)
     fun insertNewsList(news: List<News>)
 
+    @Query(""" SELECT * FROM News WHERE title MATCH :query """)
+    fun search(query: String?): List<News>
+
     @Query("SELECT * FROM News")
-    fun getNews() : List<News>
+    fun getNews(): MutableList<News>
 
     @Update
     fun getUpdate(news: News)

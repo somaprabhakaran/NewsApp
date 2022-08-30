@@ -9,5 +9,13 @@ t
 Dapp/src/main/java/com/prabhakaran/newsapp/view/MyViewModelFactory.kt,d\f\df33b068351d0e078612562aee9d7fe73c62e2c5
 q
 Aapp/src/main/java/com/prabhakaran/newsapp/database/AppDatabase.kt,7\8\78b0c29e429bd06b94b78d2373c2ff927290a60c
-l
-<app/src/main/java/com/prabhakaran/newsapp/dao/NewsListDAO.kt,9\6\96d92ee472db02d1b7ffccb70445c734c6804666
+k
+;app/src/main/java/com/prabhakaran/newsapp/rest/ApiClient.kt,1\a\1a7d2b1b51d138558b0091c9e2bc1e960f81c95a
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+r
+Bapp/src/main/java/com/prabhakaran/newsapp/activity/NewsActivity.kt,2\4\244fdfce9857040c1c8324e2bd90c03994586b88
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+i
+9app/src/main/java/com/prabhakaran/newsapp/util/Utility.kt,d\2\d25554c79749a22b1b3e23d3ef36bb705588f2e5
