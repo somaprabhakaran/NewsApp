@@ -9,9 +9,19 @@ q
 Aapp/src/main/java/com/prabhakaran/newsapp/database/AppDatabase.kt,7\8\78b0c29e429bd06b94b78d2373c2ff927290a60c
 k
 ;app/src/main/java/com/prabhakaran/newsapp/rest/ApiClient.kt,1\a\1a7d2b1b51d138558b0091c9e2bc1e960f81c95a
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 o
 ?app/src/main/java/com/prabhakaran/newsapp/util/LoadingScreen.kt,c\7\c765dc6c540076352eca06b3e6745f10ae2da3d8
 o
 ?app/src/main/java/com/prabhakaran/newsapp/model/NewsResponse.kt,9\a\9a7b9985ec1b3078dc07d5a1b985f14d399cda84
+u
+Eapp/src/main/java/com/prabhakaran/newsapp/adapter/NewsPagingSource.kt,6\7\67ed7778dd39a67fd2c88bd0657be4aa29af75e7
+y
+Iapp/src/main/java/com/prabhakaran/newsapp/adapter/NewsLoadStateAdapter.kt,c\0\c05ee3ddb3bbb27117622f8cfcfa0818254e1ab8
+r
+Bapp/src/main/java/com/prabhakaran/newsapp/activity/NewsActivity.kt,2\4\244fdfce9857040c1c8324e2bd90c03994586b88
+i
+9app/src/main/java/com/prabhakaran/newsapp/util/Utility.kt,d\2\d25554c79749a22b1b3e23d3ef36bb705588f2e5
+l
+<app/src/main/java/com/prabhakaran/newsapp/dao/NewsListDAO.kt,9\6\96d92ee472db02d1b7ffccb70445c734c6804666
+t
+Dapp/src/main/java/com/prabhakaran/newsapp/adapter/NewsListAdapter.kt,6\c\6c43912211e16bc51da303c537b2969498a0cba3

@@ -16,6 +16,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/color_bg_selected</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/news</item>
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.NewsApp</item>
+    </style>
+
     <style name="PoppinsTextViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">@font/poppins</item>
     </style>
