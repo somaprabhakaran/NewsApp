@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NewsApp/app/src/main/res/drawable-v24/news.xml" value="0.1185" />
+        <entry key="..\:/NewsApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1185" />
         <entry key="..\:/NewsApp/app/src/main/res/font/poppins_bold.xml" value="0.21944444444444444" />
         <entry key="..\:/NewsApp/app/src/main/res/font/poppins_light.xml" value="0.21944444444444444" />
         <entry key="..\:/NewsApp/app/src/main/res/font/poppins_medium.xml" value="0.21944444444444444" />
@@ -12,6 +14,8 @@
         <entry key="..\:/NewsApp/app/src/main/res/layout/layout_loading_screen.xml" value="0.1953125" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/list_item.xml" value="0.2" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/load_item.xml" value="0.209375" />
+        <entry key="..\:/NewsApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1185" />
+        <entry key="..\:/NewsApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1185" />
       </map>
     </option>
   </component>
